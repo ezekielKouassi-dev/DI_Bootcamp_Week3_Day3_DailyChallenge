@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <h1>Zone de saisie de la Premiere methodes</h1>
+        <input type="text" id="letter-input" onkeydown="return validateLetterInput(event)">
+        <script>
+
+            function validateLetterInput(event) {
+                var keyCode = event.keyCode || event.which;
+                if (keyCode >= 65 && keyCode <= 90) {
+                    return true;
+                }
+                if (keyCode == 8 || keyCode == 9 || keyCode == 46 || keyCode == 27) {
+                    return true;
+                }
+                return false;
+            }
+
+        </script>
+
+    </body>
+</html>
